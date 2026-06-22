@@ -1,0 +1,347 @@
+$bg-dark: #1a1a2e;
+$bg-card: #16213e;
+$bg-card2: #0f172a;
+$blue: #4a4de6;
+$purple: #9b59b6;
+$white: #ffffff;
+$gray-text: #a0a0b8;
+$border: #2a2a4a;
+
+.home {
+  min-height: calc(100vh - 65px);
+  background-color: $bg-dark;
+}
+
+// HERO
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 80px;
+  gap: 60px;
+  min-height: 580px;
+}
+
+.heroLeft {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba($purple, 0.15);
+  color: $purple;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.heroLeft h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+
+  span {
+    color: $purple;
+  }
+}
+
+.heroLeft p {
+  font-size: 18px;
+  color: $gray-text;
+  line-height: 1.7;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 16px;
+}
+
+.btnPrimary {
+  display: inline-block;
+  background-color: $blue;
+  color: $white;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: darken($blue, 8%);
+    transform: translateY(-2px);
+  }
+}
+
+.btnSecondary {
+  display: inline-block;
+  background-color: transparent;
+  color: $white;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid $border;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: $purple;
+    color: $purple;
+  }
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  strong {
+    font-size: 24px;
+    font-weight: 800;
+    color: $white;
+  }
+
+  span {
+    font-size: 13px;
+    color: $gray-text;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: $border;
+}
+
+.heroRight {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  flex-shrink: 0;
+}
+
+.heroCard {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $bg-card, $bg-card2);
+  border: 1px solid $border;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroCardInner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  span {
+    font-size: 80px;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 700;
+    color: $white;
+  }
+
+  small {
+    font-size: 14px;
+    color: $gray-text;
+  }
+}
+
+.floatCard1 {
+  position: absolute;
+  top: 24px;
+  right: -24px;
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.floatCard2 {
+  position: absolute;
+  bottom: 24px;
+  left: -24px;
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+// FEATURES
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 80px 60px;
+}
+
+.feature {
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    margin: 12px 0 8px;
+  }
+
+  p {
+    font-size: 13px;
+    color: $gray-text;
+    line-height: 1.6;
+  }
+}
+
+.featureIcon {
+  font-size: 36px;
+}
+
+// SECTIONS
+.section {
+  padding: 0 80px 60px;
+}
+
+.sectionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $gray-text;
+  }
+}
+
+.seeAll {
+  color: $purple;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: lighten($purple, 15%);
+  }
+}
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+// CATEGORIES
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.catCard {
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &:hover {
+    border-color: $purple;
+    transform: translateY(-4px);
+  }
+
+  span {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+  }
+
+  p {
+    font-size: 13px;
+    color: $gray-text;
+    line-height: 1.5;
+  }
+}
+
+// CTA
+.cta {
+  margin: 0 80px 80px;
+  background: linear-gradient(135deg, $blue, $purple);
+  border-radius: 20px;
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: $white;
+  }
+
+  p {
+    font-size: 16px;
+    color: rgba($white, 0.8);
+    margin-bottom: 8px;
+  }
+}

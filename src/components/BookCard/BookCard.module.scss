@@ -1,0 +1,131 @@
+$bg-card: #16213e;
+$bg-card2: #0f172a;
+$blue: #4a4de6;
+$purple: #9b59b6;
+$white: #ffffff;
+$gray-text: #a0a0b8;
+$border: #2a2a4a;
+$success: #2ecc71;
+
+.card {
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(74, 77, 230, 0.2);
+  }
+}
+
+.imgWrap {
+  width: 100%;
+  height: 220px;
+  background-color: $bg-card2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+}
+
+.author {
+  font-size: 13px;
+  color: $purple;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 13px;
+  color: $gray-text;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+}
+
+.btn {
+  background-color: $blue;
+  color: $white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  border: none;
+
+  &:hover {
+    background-color: darken($blue, 8%);
+    transform: scale(1.05);
+  }
+}
+
+.added {
+  background-color: $success !important;
+  transform: scale(1.05);
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(40px, -50px) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(80px, -100px) scale(0.2);
+  }
+}
+
+.flyEmoji {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  font-size: 28px;
+  animation: fly 1s ease forwards;
+  pointer-events: none;
+  z-index: 10;
+}
