@@ -33,8 +33,9 @@ const Cart = () => {
             alert('Savat bo\'sh!')
             return
         }
-const BOT_TOKEN = 'sizning_tokeningiz'
-const CHAT_ID = 'sizning_chat_idingiz'
+
+        const BOT_TOKEN = '8984997385:AAEcumfniKTHOkacY57luXgNz2OEdwI5QBE'
+        const CHAT_ID = '8598996517'
 
         const booksList = cartItems
             .map(item => `📖 ${item.title} x${item.qty} — ${(item.price * item.qty).toLocaleString()} so'm`)
