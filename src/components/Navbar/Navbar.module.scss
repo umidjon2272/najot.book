@@ -3,6 +3,7 @@ $bg-card: #16213e;
 $blue: #4a4de6;
 $purple: #9b59b6;
 $white: #ffffff;
+$gray-text: #a0a0b8;
 $border: #2a2a4a;
 
 .navbar {
@@ -16,14 +17,23 @@ $border: #2a2a4a;
   position: sticky;
   top: 0;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+    height: 56px;
+  }
 }
 
-.logo a {
-  font-size: 22px;
-  font-weight: 700;
-  color: $white;
-  text-decoration: none;
-  letter-spacing: 0.5px;
+.logo img {
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  border-radius: 50%;
+
+  @media (max-width: 768px) {
+    height: 36px;
+    width: 36px;
+  }
 }
 
 .links {
@@ -32,8 +42,16 @@ $border: #2a2a4a;
   align-items: center;
   gap: 32px;
 
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px;
+  }
+
   a {
-    color: #a0a0b8;
+    color: $gray-text;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
@@ -41,6 +59,14 @@ $border: #2a2a4a;
 
     &:hover {
       color: $white;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 11px;
     }
   }
 }
@@ -63,6 +89,16 @@ $border: #2a2a4a;
   &:hover {
     background-color: darken($blue, 8%);
   }
+
+  @media (max-width: 768px) {
+    padding: 6px 12px;
+    font-size: 12px !important;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 10px;
+    font-size: 11px !important;
+  }
 }
 
 .badge {
@@ -79,10 +115,4 @@ $border: #2a2a4a;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.logo img {
-  height: 45px;
-  width: 45px;
-  object-fit: contain;
-  border-radius: 50%;
 }

@@ -32,6 +32,14 @@ $success: #2ecc71;
   justify-content: center;
   overflow: hidden;
 
+  @media (max-width: 768px) {
+    height: 180px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -50,18 +58,31 @@ $success: #2ecc71;
   flex-direction: column;
   gap: 8px;
   flex: 1;
+
+  @media (max-width: 480px) {
+    padding: 12px;
+    gap: 6px;
+  }
 }
 
 .title {
   font-size: 16px;
   font-weight: 700;
   color: $white;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .author {
   font-size: 13px;
   color: $purple;
   font-weight: 500;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 .desc {
@@ -69,6 +90,14 @@ $success: #2ecc71;
   color: $gray-text;
   line-height: 1.5;
   flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 .bottom {
@@ -76,12 +105,21 @@ $success: #2ecc71;
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    margin-top: 4px;
+  }
 }
 
 .price {
   font-size: 16px;
   font-weight: 700;
   color: $white;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .btn {
@@ -93,10 +131,16 @@ $success: #2ecc71;
   font-weight: 600;
   transition: all 0.25s ease;
   border: none;
+  white-space: nowrap;
 
   &:hover {
     background-color: darken($blue, 8%);
     transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
 
