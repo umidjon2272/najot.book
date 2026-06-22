@@ -1,5 +1,4 @@
 $bg-card: #16213e;
-$blue: #4a4de6;
 $purple: #9b59b6;
 $white: #ffffff;
 $gray-text: #a0a0b8;
@@ -11,6 +10,16 @@ $border: #2a2a4a;
   gap: 12px;
   flex-wrap: wrap;
   padding: 24px 0;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  @media (max-width: 480px) {
+    gap: 6px;
+    padding: 12px 0;
+  }
 }
 
 .btn {
@@ -22,10 +31,21 @@ $border: #2a2a4a;
   font-weight: 500;
   border: 1px solid $border;
   transition: all 0.25s ease;
+  white-space: nowrap;
 
   &:hover {
     color: $white;
     border-color: $purple;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
 
